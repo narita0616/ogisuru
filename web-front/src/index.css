@@ -9,3 +9,44 @@
 body {
   @apply font-sans;
 }
+
+/* pulldown */
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+  background-image: url("./assets/arrow_down.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 40px 40px;
+}
+
+.custom-select:focus {
+  outline: none;
+}
+
+/* checkbox */
+.custom-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border: 4px solid #000;
+}
+
+.custom-checkbox:checked::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 10px;
+  height: 16px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}

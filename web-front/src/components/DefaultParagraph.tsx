@@ -1,7 +1,11 @@
 import React from "react";
 
-const DefaultParagraph: React.FC = () => {
-  return <p>This is a default paragraph.</p>;
+interface DefaultParagraphProps {
+  text: string;
+}
+
+const DefaultParagraph: React.FC<DefaultParagraphProps> = ({ text }) => {
+  return <p className="text-xl font-bold">{text}</p>;
 };
 
 export default DefaultParagraph;

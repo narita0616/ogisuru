@@ -1,9 +1,19 @@
 import React from "react";
 
-const SecondaryButton: React.FC = () => {
+interface SecondaryButtonProps {
+  text: string;
+  handleClick: () => void;
+}
+
+const SecondaryButton: React.FC<SecondaryButtonProps> = ({
+  text,
+  handleClick,
+}) => {
   return (
-    <button className="bg-gray-500 text-white py-2 px-4 rounded">
-      Secondary Button
+    <button className="h-fit w-fit" onClick={handleClick}>
+      <div className="px-12 py-2 border-4 border-black rounded-full bg-white">
+        <span className="text-3xl font-bold">{text}</span>
+      </div>
     </button>
   );
 };

@@ -27,7 +27,7 @@ const Cta: React.FC<CtaProps> = ({
     >
       <div className="relative w-full h-full">
         <img
-          className="absolute object-cover h-full border-4 border-black box-border shadow-cta"
+          className="absolute object-cover h-full border-4 border-black shadow-cta"
           src={imageUrl}
         />
         <div className="absolute bottom-8 flex flex-col px-4">

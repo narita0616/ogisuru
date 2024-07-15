@@ -1,7 +1,11 @@
 import React from "react";
 
-const LargeParagraph: React.FC = () => {
-  return <p className="text-lg">This is a large paragraph.</p>;
+interface LargeParagraphProps {
+  text: string;
+}
+
+const LargeParagraph: React.FC<LargeParagraphProps> = ({ text }) => {
+  return <p className="text-3xl font-bold">{text}</p>;
 };
 
 export default LargeParagraph;

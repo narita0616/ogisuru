@@ -1,9 +1,13 @@
 import React from "react";
 
-const ImageTheme: React.FC = () => {
+interface ImageThemeProps {
+  imageUrl: string;
+}
+
+const ImageTheme: React.FC<ImageThemeProps> = ({ imageUrl }) => {
   return (
     <div>
-      <h1>Image Theme</h1>
+      <img className="absolute object-cover h-full " src={imageUrl} />
     </div>
   );
 };

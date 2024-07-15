@@ -6,6 +6,7 @@ export default {
       colors: {
         background: {
           DEFAULT: "#FBDAC8",
+          disabled: "#CCCCCC",
         },
         text: {
           DEFAULT: "#000000",

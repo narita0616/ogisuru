@@ -1,7 +1,17 @@
 import React from "react";
 
-const MediumHeading: React.FC = () => {
-  return <h2>Medium Heading</h2>;
+interface MediumHeadingProps {
+  text: string;
+}
+
+const MediumHeading: React.FC<MediumHeadingProps> = ({ text }) => {
+  return (
+    <h2 className="h-fit w-fit">
+      <div className="px-12 py-2 border-l-4 border-black">
+        <span className="text-3xl font-bold">{text}</span>
+      </div>
+    </h2>
+  );
 };
 
 export default MediumHeading;

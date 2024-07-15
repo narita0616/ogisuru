@@ -1,11 +1,11 @@
 import React from "react";
 
-const TextTheme: React.FC = () => {
-  return (
-    <div>
-      <h1>Text Theme</h1>
-    </div>
-  );
+interface TextThemeProps {
+  text: string[];
+}
+
+const TextTheme: React.FC<TextThemeProps> = ({ text }) => {
+  return <p className="text-4xl font-bold">{text}</p>;
 };
 
 export default TextTheme;
