@@ -1,14 +1,16 @@
 import React from "react";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
+import Main from "../layout/Main";
+import LoginForm from "../containers/Login/LoginForm";
 
 const Login: React.FC = () => {
   return (
     <>
       <Header />
-      <div>
-        <h1>Login Page</h1>
-      </div>
+      <Main>
+        <LoginForm />
+      </Main>
       <Footer />
     </>
   );

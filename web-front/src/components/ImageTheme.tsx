@@ -5,11 +5,7 @@ interface ImageThemeProps {
 }
 
 const ImageTheme: React.FC<ImageThemeProps> = ({ imageUrl }) => {
-  return (
-    <div>
-      <img className="absolute object-cover h-full " src={imageUrl} />
-    </div>
-  );
+  return <img className="object-cover h-full" src={imageUrl} />;
 };
 
 export default ImageTheme;

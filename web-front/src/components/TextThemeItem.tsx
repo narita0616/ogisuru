@@ -4,12 +4,19 @@ import MediumHeading from "./MediumHeading";
 import DisabledTextInput from "./DisabledTextInput";
 import DangerButton from "./DangerButton";
 import TertiaryButton from "./TertiaryButton";
+import { Link } from "react-router-dom";
 
-interface HamburgerMenuProps {
+interface ImageThemeItemProps {
   text: string;
+  imageUrl: string;
+  linkUrl: string;
 }
 
-const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ text }) => {
+const ImageThemeItem: React.FC<ImageThemeItemProps> = ({
+  text,
+  imageUrl,
+  linkUrl,
+}) => {
   const { menuText, mediumHeadingText, dangerButtonText, TertiaryButtonText } =
     contentText;
 
@@ -24,12 +31,20 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ text }) => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="relative w-full ">
-      <div className="w-full flex justify-between px-6 py-2 border-4 border-black bg-white">
-        <div className="basis-11/12 text-2xl font-bold overflow-hidden">
-          {text}
-        </div>
-        <img src={hamburger} alt="メニュー" onClick={toggleMenu}></img>
+    <section className="relative w-full h-full cursor-pointer">
+      <div className="relative w-full h-full">
+        <Link to={linkUrl}>
+          <img
+            className="absolute object-cover h-full border-4 border-black shadow-cta"
+            src={imageUrl}
+          />
+        </Link>
+        <img
+          className="absolute right-3 top-3 h-10 w-10"
+          src={hamburger}
+          alt="メニュー"
+          onClick={toggleMenu}
+        ></img>
       </div>
 
       {isOpen && (
@@ -60,7 +75,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ text }) => {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 
@@ -71,4 +86,4 @@ const contentText = {
   TertiaryButtonText: "閉じる",
 };
 
-export default HamburgerMenu;
+export default ImageThemeItem;

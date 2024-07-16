@@ -1,17 +1,19 @@
 import React from "react";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
+import Main from "../layout/Main";
+import SignUpForm from "../containers/SignUp/SignUpForm";
 
-const SignUp: React.FC = () => {
+const Login: React.FC = () => {
   return (
     <>
       <Header />
-      <div>
-        <h1>Sign Up Page</h1>
-      </div>
+      <Main>
+        <SignUpForm />
+      </Main>
       <Footer />
     </>
   );
 };
 
-export default SignUp;
+export default Login;

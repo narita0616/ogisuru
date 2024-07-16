@@ -7,9 +7,11 @@ export default {
         background: {
           DEFAULT: "#FBDAC8",
           disabled: "#CCCCCC",
+          danger: "#FF988B",
         },
         text: {
           DEFAULT: "#000000",
+          small: "#626262",
         },
         border: {
           DEFAULT: "#000000",
