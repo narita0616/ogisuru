@@ -1,18 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import TextTheme from "../components/TextTheme";
+import ImageThemeContent from "../components/ImageThemeContent";
 import SmallParagraph from "../components/SmallParagraph";
 import DefaultParagraph from "../components/DefaultParagraph";
 import Main from "../layout/Main";
+import buzz from "../assets/moroha.jpg";
 
-const TextThemes: React.FC = () => {
+const ImageTheme: React.FC = () => {
   return (
     <Main>
       <div className="relative w-full h-screen">
         <div className="absolute inset-0 flex items-center justify-center">
-          <TextTheme
-            text={"異世界転生者同士の飲み会あるあるを教えてください"}
-          />
+          <div className="h-3/5 max-w-full">
+            <ImageThemeContent imageUrl={buzz} />
+          </div>
         </div>
         <div className="absolute inset-x-0 bottom-4 flex flex-row">
           <div className="basis-1/2">
@@ -29,4 +30,4 @@ const TextThemes: React.FC = () => {
   );
 };
 
-export default TextThemes;
+export default ImageTheme;
