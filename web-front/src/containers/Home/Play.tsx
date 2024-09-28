@@ -41,7 +41,7 @@ const Play: React.FC = () => {
             imageUrl={randamTheme}
             title={thirdSection}
             englishTitle={thirdSection_en}
-            linkUrl="/another-page"
+            linkUrl="/randomtheme"
           />
         </div>
       </div>

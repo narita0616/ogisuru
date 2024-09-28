@@ -1,9 +1,9 @@
 import React from "react";
 import Main from "../layout/Main";
-import Theme from "../containers/ImageTheme/Theme";
-import BottomMenu from "../containers/ImageTheme/BottomMenu";
+import Theme from "../containers/RandomTheme/Theme";
+import BottomMenu from "../containers/RandomTheme/BottomMenu";
 
-const ImageTheme: React.FC = () => {
+const RandomTheme: React.FC = () => {
   return (
     <Main>
       <div className="relative w-full h-screen">
@@ -14,4 +14,4 @@ const ImageTheme: React.FC = () => {
   );
 };
 
-export default ImageTheme;
+export default RandomTheme;
